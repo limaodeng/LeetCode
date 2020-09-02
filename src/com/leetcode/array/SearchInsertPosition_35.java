@@ -1,7 +1,5 @@
 package com.leetcode.array;
 
-import java.util.Arrays;
-
 /**
  * @Auther: dlm
  * @Date: 2020/2/24 01:07

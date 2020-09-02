@@ -1,6 +1,6 @@
 package com.datastructure.queue;
 
-
+import java.util.Objects;
 
 /**
  * 数组实现顺序队列
@@ -22,7 +22,7 @@ public class ArrayQueue<T> {
 
     public ArrayQueue(int capacity){
         this.capacity = capacity;
-        this.data = (T[])new Object[capacity];
+        this.data = (T[])new Objects[capacity];
     }
 
     public ArrayQueue(){
@@ -70,13 +70,4 @@ public class ArrayQueue<T> {
         data[tail++] = value;
         return true;
     }
-
-    //判断是否队空
-    public boolean isEmpty(){
-        if(head == tail){
-            return true;
-        }
-        return false;
-    }
-
 }

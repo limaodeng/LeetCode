@@ -49,4 +49,13 @@ public class ArrayStack<T> {
         return obj;
     }
 
+    //判断栈是否为空
+    public boolean empty(){
+        return count == 0;
+    }
+
+    //获取栈中元素个数
+    public int size(){
+        return count;
+    }
 }
