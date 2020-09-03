@@ -70,4 +70,9 @@ public class ArrayQueue<T> {
         data[tail++] = value;
         return true;
     }
+
+    public boolean isEmpty(){
+        return !(head == tail);
+    }
+
 }

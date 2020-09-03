@@ -3,9 +3,6 @@ package com.datastructure.binarytree;
 
 import com.datastructure.queue.ArrayQueue;
 
-import javax.swing.tree.TreeNode;
-import java.util.ArrayDeque;
-import java.util.Queue;
 
 /**
  * @Auther: dlm

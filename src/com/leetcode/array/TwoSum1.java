@@ -1,7 +1,7 @@
 package com.leetcode.array;
 
-import com.test.HashMap;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
