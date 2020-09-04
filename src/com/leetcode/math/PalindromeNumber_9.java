@@ -35,19 +35,43 @@ public class PalindromeNumber_9 {
      * Coud you solve it without converting the integer to a string?
      */
     public static void main(String[] args) {
-        System.out.println(isPalindrome(-121));
+        System.out.println(isPalindrome2(212));
+    }
+
+    public static boolean isPalindrome2(int x) {
+        if (x < 0) return false;
+        int div = 1;
+        //为取出第一个数做准备
+        while (x / div >= 10) {
+            div *= 10;
+        }
+        while (x > 0) {
+            //取出第一个数
+            int left = x / div;
+            //取出最后个数
+            int right = x % 10;
+            //比较第一个数和最后个数是否相等
+            if (left != right) return false;
+            //去掉头和尾两个数
+            x = (x % div) / 10;
+            //因为去掉两个数，所以要除100
+            div /= 100;
+        }
+        return true;
     }
 
     public static boolean isPalindrome(int x) {
+        //如果x为负数、x的最后一位为0并且x不等于0
         if(x < 0 || (x % 10 == 0 && x != 0)) return false;
-
-        int res =0;
+        //res为后一半的数
+        int res = 0;
+        //res大于等于x，则结束
         while (res < x){
             int temp = x % 10;
             res = res * 10 + temp;
             x = x /10;
         }
-
+        //如果是奇数则res == x，如果是偶数则 res / 10 == x
         return res == x || res / 10 == x;
     }
 
