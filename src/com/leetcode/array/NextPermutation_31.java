@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @Date: 2020/2/18 01:05
  * @Description:
  */
-public class Next_Permutation_31 {
+public class NextPermutation_31 {
 
     /**
      * 题目：
