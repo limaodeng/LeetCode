@@ -77,7 +77,7 @@ public class SymmetricTree_101 {
             return false;
         }
 
-        while (!stack.empty()){
+        while (!stack.isEmpty()){
             if(stack.size() % 2 != 0) return false;
 
             left = stack.pop();

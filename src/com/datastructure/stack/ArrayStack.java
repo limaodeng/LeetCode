@@ -50,7 +50,7 @@ public class ArrayStack<T> {
     }
 
     //判断栈是否为空
-    public boolean empty(){
+    public boolean isEmpty(){
         return count == 0;
     }
 
