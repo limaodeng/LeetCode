@@ -17,6 +17,11 @@ public class TreeNode {
     public TreeNode() {
     }
 
+
+    public void setVal(int val) {
+        this.value = val;
+    }
+
     public TreeNode(int value) {
         this.value = value;
     }
