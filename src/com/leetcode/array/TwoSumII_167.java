@@ -6,7 +6,7 @@ package com.leetcode.array;
  * @Date: 2020/8/11 23:33
  * @Version 1.0
  */
-public class TwoSumII167 {
+public class TwoSumII_167 {
     /**
      * Given an array of integers that is already sorted in ascending order,
      *

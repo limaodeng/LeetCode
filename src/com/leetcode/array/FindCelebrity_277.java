@@ -1,6 +1,6 @@
 package com.leetcode.array;
 
-public class FindCelebrity277 {
+public class FindCelebrity_277 {
     public static void main(String[] args) {
 
     }

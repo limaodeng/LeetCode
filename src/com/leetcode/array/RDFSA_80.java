@@ -1,6 +1,6 @@
 package com.leetcode.array;
 
-public class RDFSA80 {
+public class RDFSA_80 {
     public static void main(String[] args) {
         int[] nums = {1,1,1,2,2,3,3,3};
         int res = removeDuplicates(nums);

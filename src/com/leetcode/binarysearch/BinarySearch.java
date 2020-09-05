@@ -1,4 +1,4 @@
-package com.datastructure.binarytree;
+package com.leetcode.binarysearch;
 
 public class BinarySearch {
     public static void main(String[] args){

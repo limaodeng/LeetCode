@@ -1,7 +1,7 @@
 package com.leetcode.array;
 
 
-public class BullsAndCows299 {
+public class BullsAndCows_299 {
 
     public static void main(String[] args) {
         String secret = "1123";

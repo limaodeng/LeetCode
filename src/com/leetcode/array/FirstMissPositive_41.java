@@ -1,7 +1,7 @@
 package com.leetcode.array;
 
 
-public class FirstMissPositive41 {
+public class FirstMissPositive_41 {
 
     public static void main(String[] args) {
         int[] nums = {1,2,3};

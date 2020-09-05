@@ -1,6 +1,6 @@
 package com.leetcode.array;
 
-public class GasStation134 {
+public class GasStation_134 {
     public static void main(String[] args) {
 
     }
