@@ -1,9 +1,5 @@
 package com.leetcode.linkedlist;
 
-import com.datastructure.linkedlist.SingleLinkedList;
-import com.datastructure.stack.ArrayStack;
-
-import java.util.List;
 import java.util.Stack;
 
 /**
