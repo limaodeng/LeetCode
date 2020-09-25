@@ -1,4 +1,4 @@
-package com.leetcode.binarytree;
+package com.leetcode.tree;
 
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
