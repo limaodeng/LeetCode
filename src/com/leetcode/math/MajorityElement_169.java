@@ -1,5 +1,10 @@
 package com.leetcode.math;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Auther: dlm
  * @Date: 2020/9/27 09:17
@@ -27,7 +32,7 @@ public class MajorityElement_169 {
      */
     public static void main(String[] args) {
         int[] nums = {2,2,1,1,1,2,2};
-        System.out.println(majorityElement(nums));
+        System.out.println(majorityElement2(nums));
     }
 
     //摩尔投票法
@@ -45,6 +50,44 @@ public class MajorityElement_169 {
             }
         }
         return res;
+    }
+
+    //位运算
+    public static int majorityElement2(int[] nums) {
+        int res = 0, n = nums.length;
+        for (int i = 0; i < 32; ++i) {
+            int ones = 0, zeros = 0;
+            for (int num : nums) {
+                if (ones > n / 2 || zeros > n / 2) break;
+                if ((num & (1 << i)) != 0) {
+                    ++ones;
+                }else{
+                    ++zeros;
+                }
+            }
+            if (ones > zeros) {
+                res |= (1 << i);
+            }
+        }
+        return res;
+    }
+
+    //排序取中间的数
+    public static int majorityElement3(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length / 2];
+    }
+
+    //HashMap
+    public static int majorityElement4(int[] nums) {
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int num : nums){
+            map.put(num,map.getOrDefault(num,0)+1);
+            if(map.get(num) > nums.length / 2){
+                return num;
+            }
+        }
+        return -1;
     }
 
 }
