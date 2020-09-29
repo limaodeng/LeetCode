@@ -1,12 +1,8 @@
 package com.leetcode.design;
 
-import sun.misc.LRUCache;
-
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @Auther: dlm
@@ -65,13 +61,13 @@ public class LRUCache_146 {
      * At most 3 * 104 calls will be made to get and put.
      */
     public static void main(String[] args) {
-        LRUCache cache = new LRUCache(3);
+        LRUCache2<Integer, Integer> cache = new LRUCache2<>();
         cache.put(1, 1);
         cache.put(2, 2);
         cache.put(3, 3);
         cache.get(1);
-        cache.put(4, 3);
-        System.out.println(cache);
+        cache.put(4, 4);
+        System.out.println(cache.keySet());
     }
 
     //1、HashMap + 一个简单的双向链表
@@ -169,6 +165,29 @@ public class LRUCache_146 {
         @Override
         public String toString() {
             return map.keySet().toString();
+        }
+
+    }
+
+
+    // 2、使用LinkedHashMap（基于HashMap和双向链表）实现
+    // https://blog.csdn.net/u013568373/article/details/90607083
+    public static class LRUCache2<K,V> extends LinkedHashMap<K, V>{
+
+        //首先设定最大缓存空间 MAX_ENTRIES 为 3；
+        private static final int MAX_ENTRIES = 3;
+
+        //之后使用LinkedHashMap的构造函数将 accessOrder设置为 true，开启 LRU顺序；
+        public LRUCache2() {
+            super(MAX_ENTRIES, 0.75f, true);
+        }
+
+        //最后覆盖removeEldestEntry(）方法实现，在节点多于 MAX_ENTRIES 就会将最近最少使用的数据移除。
+        //因为这个函数默认返回false，不重写的话缓存爆了的时候无法删除最近最久未使用的节点
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
+            //在容量超过最大允许节点数的时候返回true，使得在afterNodeInsertion函数中能执行removeNode()
+            return size() > MAX_ENTRIES;
         }
 
     }
