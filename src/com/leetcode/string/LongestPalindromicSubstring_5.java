@@ -41,8 +41,12 @@ public class LongestPalindromicSubstring_5 {
         System.out.println(longestPalindrome3(s));
     }
 
+    //暴力求解法
+
+
     // 马拉车算法
     // https://blog.csdn.net/weixin_43836046/article/details/95784075
+    // https://www.cxyxiaowu.com/2665.html#:~:text=%E9%A9%AC%E6%8B%89%E8%BD%A6%E7%AE%97%E6%B3%95%EF%BC%88%20Manacher,%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%8F%90%E5%8D%87%E5%88%B0%E4%BA%86%20%E7%BA%BF%E6%80%A7%20%E3%80%82
     public static String longestPalindrome3(String s) {
         // 先预处理字符串
         String str = preHandleString(s);
