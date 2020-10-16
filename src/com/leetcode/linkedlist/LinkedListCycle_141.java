@@ -56,7 +56,7 @@ public class LinkedListCycle_141 {
 
     }
 
-
+    //快慢指针
     public boolean hasCycle(ListNode head) {
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null){
