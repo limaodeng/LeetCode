@@ -1,9 +1,5 @@
 package com.leetcode.tree;
 
-import com.datastructure.binarytree.TreeNode;
-import com.datastructure.queue.ArrayQueue;
-import com.datastructure.queue.LinkedListQueue;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
