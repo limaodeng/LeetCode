@@ -38,7 +38,7 @@ public class BinaryTreeLevelOrderTraversal_102 {
     //广度优先遍历或层次遍历（递归）
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> resList = new ArrayList<>();
-        helper(resList,1,root);
+        helper(resList,0,root);
         return resList;
     }
 
