@@ -1,7 +1,7 @@
 package com.leetcode.binarysearch;
 
 /**
- * @ClassComment:
+ * @ClassComment: 搜索插入位置
  * @Auther: dlm
  * @Date: 2020/11/4 00:33
  * @Version 1.0
