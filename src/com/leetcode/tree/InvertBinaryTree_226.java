@@ -1,10 +1,7 @@
 package com.leetcode.tree;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * @Auther: dlm
