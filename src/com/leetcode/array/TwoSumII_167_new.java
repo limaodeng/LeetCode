@@ -48,10 +48,39 @@ public class TwoSumII_167_new {
     public static void main(String[] args) {
         int[] numbers = {2,7,11,15};
         int target = 9;
-        int[] answer = towSumII(numbers,target);
+        int[] answer = towSumII2(numbers,target);
         System.out.println(answer[0]);
         System.out.println(answer[1]);
     }
+
+
+    /**
+     *  方式2：双指针
+     *  1）初始化首指针指向首元素，尾指针指向尾元素。
+     *  2）如果首尾指针对应元素相加小于target,则首指针从左往右移动。
+     *  3）如果首尾指针对应元素相加大于target,则尾指针从右往左移动。
+     */
+    public static int[] towSumII2(int[] arr,int target){
+        int[] answer = new int[2];
+
+        int head = 0;
+        int tail = arr.length - 1;
+
+        while (head < tail){
+            if(arr[head] + arr[tail] > target){
+                tail--;
+            }if(arr[head] + arr[tail] < target){
+                head++;
+            }if(arr[head] + arr[tail] == target){
+                answer[0] = head + 1;
+                answer[1] = tail + 1;
+                break;
+            }
+        }
+
+        return answer;
+    }
+
 
     /**
      *  方式1：二分查找
