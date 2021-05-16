@@ -23,6 +23,7 @@ public class SumOfTwoIntegers_371 {
      */
 
     //答案：https://www.cnblogs.com/dyzhao-blog/p/5662891.html
+    //https://segmentfault.com/a/1190000021210551
     public static void main(String[] args) {
         int a = 3;
         int b = 5;
@@ -32,9 +33,9 @@ public class SumOfTwoIntegers_371 {
 
     public static int getSum(int a, int b) {
         if(b == 0) return  a;
-        int i1 = a ^ b; //异或运算 相对于 不要余数的加法运算
-        int i2 = a & b; //与运算 求 余数
-        int i3 = i2 << 1;   //余数左移一位
+        int i1 = a ^ b; //异或运算获取的是两个数的无进位和
+        int i2 = a & b; //与运算 求 进位
+        int i3 = i2 << 1;   //左移1位就是最终结果的进位数
         return getSum(i1, i3);
     }
 
